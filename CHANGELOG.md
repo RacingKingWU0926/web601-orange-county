@@ -1,3 +1,9 @@
+## Week3 Day3 - [2023-09-14]
+### Requirements
+For week3-day3 Lab, add a gallery page to your mini website with javascript integration. The gallery page should:
+- Have at least 10 images, each having the same dimensions
+- Use JavaScript (arrays and loops), as practice, to display the those images
+
 ## Week2 Day3 - [2023-09-07]
 ### Requirements
 For week2-day3 Lab, add styling to the webpages.

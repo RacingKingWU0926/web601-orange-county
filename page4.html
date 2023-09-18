@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery - Community Board</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="gallery">
+            <header>
+                <!-- Main Header -->
+                <div class="main-header">
+                    <a class="logo" href="https://en.wikipedia.org/wiki/Orange_County,_California" target="_blank">
+                        <img src="images/oc-logo.png" alt="Orange County Logo">
+                    </a>
+                    <!-- Top Nav -->                
+                    <nav class="top-nav">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="page2.html">Places to Visit</a></li>
+                            <li><a href="page2.html">Things to Do</a></li>
+                            <li><a href="/">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="main-display">
+                    Orange County<br>Community Board
+                </div>
+            </header>
+            <!-- Main Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Summary</a></li>
+                    <li><a href="page2.html">Places to Visit</a></li>
+                    <li><a href="page2.html">Things to Do</a></li>
+                    <li class="active"><a href="page4.html">Gallery</a></li>
+                    <li><a href="page3.html"">Make a Post</a></li>
+                </ul>
+            </nav>
+            <!-- Gallery -->
+            <main>
+                <h1>Images of Orange County</h1>
+                <ul id="album"></ul>
+            </main>
+            <footer>&copy; Copyright 2023</footer>
+        </div>
+        <!-- Script to display #album -->
+        <script>
+            var fileNames = [];
+            var imageCaptions = ["Ocean Front", "Fisherman", "Allen Park", "Angel in the Forest", "Ocean Sunrise", "James Madison", "Foliage", "Sunset", "Maisan Provincial Park", "Fresh Pumpkins"]
+            var imageDescriptions = ["Ocean front", "Fisherman", "Allen Park", "Angel in the Forest", "Ocean Sunrise", "James Madison", "Foliage", "Sunset", "Maisan Provincial Park", "Fresh Pumpkins"]
+            var imageList = [];
+            var listStart = "<li><figure>";
+            var listClose = "</figure></li>";
+            for (var i=0; i<10; i++) {
+                fileNames.push("oc_gallery_" + (i + 1));
+                imgSource = "<img src='images/" + fileNames[i] + ".jpg'>";
+                imgCaption = "<figcaption>" + imageCaptions[i] + "</figcaption>";
+                imgDesc = "<span class='description'><span>This is an image of " + imageDescriptions[i] + " related to Orange County. The picture was selected because of its natural sincerity having no elements of artificial or manipulation presentation. The photograph under analysis depicts nature in all its beauty and magic.</span></span>";
+                imageList.push(listStart + imgSource + imgCaption + imgDesc + listClose);
+            }
+            document.getElementById("album").innerHTML = imageList.join('');
+        </script>
+    </body>
+</html>
