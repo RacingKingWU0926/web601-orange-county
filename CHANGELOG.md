@@ -1,8 +1,6 @@
 ## Week2 Day3 - [2023-09-07]
-### Added
+### Requirements
 For week2-day3 Lab, add styling to the webpages.
-- Styling for `index.html`.
-- Partial styling for `page3.html` (will add more styling along the way).
 
 <br>
 
