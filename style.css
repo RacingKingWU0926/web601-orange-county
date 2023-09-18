@@ -1,12 +1,110 @@
+header .main-header > .logo img {
+    height: 60px;
+    position: absolute;
+    left: 5px;
+    top: -6px;
+}
+
+header .main-header > .top-nav {
+    height: 38px;
+    padding-top: -10px;
+}
+
+header .main-header > .top-nav ul {
+    text-align: right;
+}
+
+header .main-header > .top-nav li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    list-style-position: none;
+    display: inline;
+    margin-top: 50px;
+    padding: 0px 10px;
+}
+
+header .main-header > .top-nav li a {
+    text-decoration: none;
+    color: rgb(20, 85, 155);
+    padding: 10px 10px 10px 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+li a:hover{
+    background-color: lightgrey;
+}
+
+header .main-display {
+    background: url("images/crystal-cove-state-park.jpg");
+    background-repeat: no-repeat;
+    height: 700px;
+    font-size: 90px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: bisque;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.main-display h1 {
+    color: orange;
+}
+
+.main-nav {
+    background-color: rgb(250, 244, 244);
+    height: 60px;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.main-nav li {
+    list-style-position: none;
+    display: inline;
+    padding: 0 40px;
+}
+.main-nav li a {
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    color: black;
+    padding: 17px 60px 17px 60px;
+    margin-left: -80px;
+}
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}h1{
-    color:orange;
-    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }h2{
     color:black;
     font-size: 25px;
 }p{
     color:black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+label {
+    display: block;
+    margin: 15px 0 0 0;
+}
+input {
+    width: 300px;
+}
+input[type="radio"] {
+    width: 25px;
+}
+textarea {
+    width: 300px;
+}
+input[type="submit"] {
+    display: block;
+    margin: 20px 0 10px 0;
+    width: 100px;
+}
+
+footer {
+    height: 40px;
+    background-color: rgb(129, 141, 179);
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(211, 218, 240);
 }
