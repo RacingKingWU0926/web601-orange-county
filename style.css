@@ -141,10 +141,18 @@ input[type="submit"] {
     margin-top: -4px;
 }
 
-/* TODO: fix the HTML part for floating box */
+/* TODO: fix the HTML part for floating box. Hidden now. */
 #gallery .image-container .floating-box {
     visibility: hidden;
 }
+/* #gallery .image-container .floating-box {
+    padding: 10px;
+    display: inline-block;
+    width: 396px;
+    word-wrap: break-word;
+    margin-top: 1px;
+    margin-bottom: 10px;
+} */
 
 #gallery .image-container .description-box {
     position: fixed;
@@ -180,17 +188,6 @@ input[type="submit"] {
 #gallery .image-container figure:hover {
     cursor: pointer;
 }
-
-
-/* #gallery .image-container .description-box {
-    padding: 10px;
-    display: inline-block;
-    width: 396px;
-    word-wrap: break-word;
-    margin-top: 1px;
-    margin-bottom: 10px;
-} */
-
 
 footer {
     height: 40px;
