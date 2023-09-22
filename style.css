@@ -47,10 +47,6 @@ header .main-display {
     padding-top: 200px;
 }
 
-.main-display h1 {
-    color: orange;
-}
-
 .main-nav {
     background-color: rgb(250, 244, 244);
     height: 60px;
@@ -119,18 +115,23 @@ input[type="submit"] {
     padding-top: 200px;
 }
 
-#gallery main #album li {
-    display: inline-block;
+#gallery main h1 {
+    padding: 10px;
+    margin-left: 70px;
+    font-weight: bolder;
 }
 
-#gallery main #album figure img {
+#gallery main #album .image-container {
+    display: inline-block;
+    margin: 10px -10px;
+}
+
+#gallery .image-container img {
     width: 416px;
     height: 234px;
 }
-#gallery main #album figure img:hover {
-    cursor: pointer;
-}
-#gallery main #album figure figcaption {
+
+#gallery .image-container figcaption {
     font-weight: bold;
     padding: 10px;
     text-align: center;
@@ -139,20 +140,57 @@ input[type="submit"] {
     width: 396px;
     margin-top: -4px;
 }
-#gallery main #album figure .description {
+
+/* TODO: fix the HTML part for floating box */
+#gallery .image-container .floating-box {
+    visibility: hidden;
+}
+
+#gallery .image-container .description-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-height: 250px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+}
+#gallery .image-container .description-box h2, p {
+    color: #fff;
+}
+
+.close-button {
+    display: block;
+    border-color: rgba(0, 0, 0, 0);
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: opacity 0.3s ease;
+    color: rgb(233, 233, 85);
+    font-size: medium;
+    margin: 70px 220px 40px 220px;
+}
+.close-button:hover {
+    cursor: pointer;
+}
+
+#gallery .image-container figure:hover {
+    cursor: pointer;
+}
+
+
+/* #gallery .image-container .description-box {
     padding: 10px;
     display: inline-block;
     width: 396px;
     word-wrap: break-word;
     margin-top: 1px;
     margin-bottom: 10px;
-}
-#gallery main #album figure .description span {
-    visibility: hidden;
-}
-#gallery main #album figure .description:hover span {
-    visibility: visible;
-}
+} */
+
 
 footer {
     height: 40px;

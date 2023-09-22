@@ -45,20 +45,52 @@
         </div>
         <!-- Script to display #album -->
         <script>
-            var fileNames = [];
-            var imageCaptions = ["Ocean Front", "Fisherman", "Allen Park", "Angel in the Forest", "Ocean Sunrise", "James Madison", "Foliage", "Sunset", "Maisan Provincial Park", "Fresh Pumpkins"]
-            var imageDescriptions = ["Ocean front", "Fisherman", "Allen Park", "Angel in the Forest", "Ocean Sunrise", "James Madison", "Foliage", "Sunset", "Maisan Provincial Park", "Fresh Pumpkins"]
-            var imageList = [];
-            var listStart = "<li><figure>";
-            var listClose = "</figure></li>";
-            for (var i=0; i<10; i++) {
-                fileNames.push("oc_gallery_" + (i + 1));
-                imgSource = "<img src='images/" + fileNames[i] + ".jpg'>";
-                imgCaption = "<figcaption>" + imageCaptions[i] + "</figcaption>";
-                imgDesc = "<span class='description'><span>This is an image of " + imageDescriptions[i] + " related to Orange County. The picture was selected because of its natural sincerity having no elements of artificial or manipulation presentation. The photograph under analysis depicts nature in all its beauty and magic.</span></span>";
-                imageList.push(listStart + imgSource + imgCaption + imgDesc + listClose);
+            const imgCaptions = ["Ocean Front", "Fisherman", "Allen Park", "Angel in the Forest", "Ocean Sunrise", "James Madison", "Foliage", "Sunset", "Maisan Provincial Park", "Fresh Pumpkins"];
+            const floatTexts = ["A building in Ocean Front", "Fisherman on a lake", "Allen Park in the morning", "Angel in a fictional forest", "Ocean sunrise at 5", "James Madison sculpture", "Allen Park at fall", "Yoga in the early morning", "Maisan Provincial Park in spring", "Pumpkins in a farmers market"];
+            const imgContainer = "image-container";
+            const floatBox = "floating-box";
+            const descBox = "description-box";
+            const imgClass = "oc-image"
+            const closeButton = "<button class='close-button'>Click This To Close</button>"
+            var containers = [];
+
+            function closeBox() {
+
             }
-            document.getElementById("album").innerHTML = imageList.join('');
+
+            for (var i=0; i<imgCaptions.length; i++) {
+                imgElem = `<img class="${imgClass}" src="images/oc_gallery_${i+1}.jpg">`;
+                capElem = `<figcaption>${imgCaptions[i]}</figcaption>`;
+                figure = `<figure>${imgElem}${capElem}</figure>`;
+
+                floatElem = `<span class="${floatBox}"> ${floatTexts[i]} </span>`;
+                longDesc = `This is an image of ${imgCaptions[i]} related to Orange County. The picture was selected because of its natural sincerity having no elements of artificial or manipulation presentation. The photograph under analysis depicts nature in all its beauty and magic.`;
+                boxElem = `<div class="${descBox}"> <h2>${imgCaptions[i]}</h2> <p>${longDesc}</p> ${closeButton} </div>`;
+                containers.push(`<div class="${imgContainer}"> ${figure} ${floatElem} ${boxElem} </div>`);
+            }
+            document.getElementById("album").innerHTML = containers.join('');
+        </script>
+        <!-- Script to display description box on click -->
+        <script>
+            const album = document.getElementById("album");
+            const images = album.getElementsByClassName("oc-image");
+            const imgContainers = album.getElementsByClassName("image-container");
+            const descBoxes = album.getElementsByClassName("description-box");
+            const cBtns = document.getElementsByClassName("close-button");
+
+            for (let i = 0; i < images.length; i++) {
+                images[i].addEventListener("click", function() {
+                    descBoxes[i].style.visibility = "visible";
+                });
+
+                imgContainers[i].addEventListener("mouseleave", function() {
+                    descBoxes[i].style.visibility = "hidden";
+                });
+
+                cBtns[i].addEventListener("click", function() {
+                    descBoxes[i].style.visibility = "hidden";
+                });
+            }
         </script>
     </body>
 </html>
