@@ -1,3 +1,10 @@
+## Week4 Day3 HW - [2023-09-25]
+### Requirements
+For week4-day3 homework, make sure you have a contact form already in place. If you don’t already have a form, design one using previous examples or assignments.
+
+And then, you will need to add some UI on the preferred contact method part. It needs to be a dropdown with some options. ***Only if*** the user selects "Email", the box "please enter your email" will occur. Apply the same logic when the user selects "Phone".
+
+
 ## Week4 Day3 - [2023-09-21]
 ### Requirements
 For week4-day3 Lab, add an information box to appear when the user clicks on the description text bar. 

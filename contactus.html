@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>Cliffs Contact</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css"></link>
+</head>
+<body id="contact">
+    <!-- Container to wrap everything -->
+    <div>
+        <header>
+            <!-- Main Header -->
+            <div class="main-header">
+                <a class="logo" href="https://en.wikipedia.org/wiki/Orange_County,_California" target="_blank">
+                    <img src="images/oc-logo.png" alt="Orange County Logo">
+                </a>
+                <!-- Top Nav -->                
+                <nav class="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="page2.html">Places to Visit</a></li>
+                        <li><a href="page2.html">Things to Do</a></li>
+                        <li><a href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main>
+            <h1>Contacting Us</h1>
+            <p>You can drop by the visitors information center at the cliff site that you plan on visiting. They are open 7 days a week from 8.00AM to 5.00PM. You can also contact us directly if you need additional information about the Cliffs, Hours of Operations, Facilities or questions about this site using one of the following:</p>                
+            <div class="contactinfo">
+                <div class="phone">
+                    <span>Phone:</span><span>(800)OCC-BOARD</span>
+                </div>
+                <div class="email">
+                    <span>Email:</span><span>contact@occb.com</span>
+                </div>
+            </div>
+            <!-- Main Form -->
+            <form action="/contact" method="post">  
+            <fieldset>  
+                <legend>Contact Form</legend>
+                <div class="textbox">
+                    <label>Your name:</label>
+                    <input type="text" name="name" placeholder="John Doe">
+                </div>
+                <div class="selectmenu">
+                    <label>Which contact method would you prefer?</label>  
+                    <select id="contactMethod">
+                        <option>Select One</option>
+                        <option>Email</option>
+                        <option>Phone</option>
+                    </select>
+                    <div id="contactInput"></div>
+                </div>
+                <div class="commentbox">
+                    <label>How can we help you?</label>  
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <input id="submit" type="submit" value="Submit">
+                </div> 
+            </fieldset>  
+            </form>
+        </main>
+        <!-- Footer -->
+        <footer>&copy; Copyright 2023</footer>
+    </div>
+    <script src="js/contact.js"></script>
+</body>
