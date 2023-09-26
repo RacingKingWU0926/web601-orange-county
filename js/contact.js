@@ -1,5 +1,5 @@
-const emailHTML = "<label>Email:</label><input type='email' name='email' placeholder='johndoe@gmail.com'>"
-const phoneHTML = "<label>Phone:</label><input type='text' name='phone' placeholder='xxx-xxx-xxxx'>"
+const emailHTML = "<label>Enter your email:</label><input type='email' name='email' placeholder='johndoe@gmail.com'>"
+const phoneHTML = "<label>Enter your phone:</label><input type='text' name='phone' placeholder='xxx-xxx-xxxx'>"
 
 const selectElement = document.getElementById("contactMethod");
 
