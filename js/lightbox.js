@@ -5,22 +5,15 @@ $(document).ready(function(){
 
         $('.backdrop').animate({'opacity':'.50'}, 300, 'linear').css('display', 'block');
         $('.lightbox').fadeIn();
+
+        // If lightbox has an image, clean it first
+        if ($('.lightbox').contents('img')) {
+            $('.lightbox').contents().remove('img');
+        };
+
+        var clickedImage = $(this).clone();
+        $('.lightbox').append(clickedImage);
     });
-
-        //Check if lightbox has an image
-    //     if ($('.lightbox').contents('img')) {
-    //         $('.lightbox').contents().remove('img');
-    //     }
-
-    //     //Get text content in attribute
-    //     var altvalue = $(this).attr('alt');
-    //     console.log(altvalue);
-
-    //     if (altvalue=="Ocean Front") {
-    //         var img = $('#album:nth-child(1) .imageContainer .figure img').clone(); //Duplicate DOM element
-    //         $('.lightbox').append(img); //Insert duplicated element in another element
-    //     }
-    // });
 
     /* Click to close lightbox */
     $('.close, .backdrop').click(function(){

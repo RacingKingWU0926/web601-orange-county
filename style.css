@@ -197,7 +197,8 @@ h1 {
     transform: translate(-50%, -50%);
     width: auto;
     height: auto;
-    width: 600px;
+    height: 600px;
+    width: 800px;
     background: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -207,10 +208,12 @@ h1 {
 }
 
 .lightbox img {
-    width:100%;
+    width: 100%;
 }
 
 .close {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
     float: right;
     cursor: pointer;
 }
