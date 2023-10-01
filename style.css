@@ -102,17 +102,17 @@ h1 {
     font-weight: bolder;
 }
 
-#gallery main #album .image-container {
+#gallery main #album .imageContainer {
     display: inline-block;
     margin: 10px -10px;
 }
 
-#gallery .image-container img {
+#gallery .imageContainer img {
     width: 416px;
     height: 234px;
 }
 
-#gallery .image-container figcaption {
+#gallery .imageContainer figcaption {
     font-weight: bold;
     padding: 10px;
     text-align: center;
@@ -123,10 +123,10 @@ h1 {
 }
 
 /* TODO: fix the HTML part for floating box. Hidden now. */
-#gallery .image-container .floating-box {
+#gallery .imageContainer .floatingBox {
     visibility: hidden;
 }
-/* #gallery .image-container .floating-box {
+/* #gallery .imageContainer .floatingBox {
     padding: 10px;
     display: inline-block;
     width: 396px;
@@ -135,7 +135,7 @@ h1 {
     margin-bottom: 10px;
 } */
 
-#gallery .image-container .description-box {
+#gallery .imageContainer .descriptionBox {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -148,11 +148,11 @@ h1 {
     transition: opacity 0.3s ease;
     visibility: hidden;
 }
-#gallery .image-container .description-box h2, p {
+#gallery .imageContainer .descriptionBox h2, p {
     color: #fff;
 }
 
-.close-button {
+.closeButton {
     display: block;
     border-color: rgba(0, 0, 0, 0);
     padding: 10px 10px;
@@ -162,11 +162,11 @@ h1 {
     font-size: medium;
     margin: 70px 220px 40px 220px;
 }
-.close-button:hover {
+.closeButton:hover {
     cursor: pointer;
 }
 
-#gallery .image-container figure:hover {
+#gallery .imageContainer figure:hover {
     cursor: pointer;
 }
 
