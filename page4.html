@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
         <title>Gallery - Community Board</title>
         <link rel="stylesheet" href="style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="gallery">
@@ -39,25 +41,32 @@
             <!-- Gallery -->
             <main>
                 <h1>Images of Orange County</h1>
-                <ul id="album"></ul>
+                <div id="album"></div>
             </main>
             <footer>&copy; Copyright 2023</footer>
         </div>
+
+        <div class="backdrop"></div>
+        <div class="lightbox">
+            <div class="close">x</div>
+        </div>  
+
         <!-- Script to display #album -->
         <script>
             const imgCaptions = ["Ocean Front", "Fisherman", "Allen Park", "Angel in the Forest", "Ocean Sunrise", "James Madison", "Foliage", "Sunset", "Maisan Provincial Park", "Fresh Pumpkins"];
             const floatTexts = ["A building in Ocean Front", "Fisherman on a lake", "Allen Park in the morning", "Angel in a fictional forest", "Ocean sunrise at 5", "James Madison sculpture", "Allen Park at fall", "Yoga in the early morning", "Maisan Provincial Park in spring", "Pumpkins in a farmers market"];
             const imgContainer = "imageContainer";
-            const imgClass = "imgLightbox"
+            const lightboxToggleClass = "lightboxToggle";
             const floatBox = "floatingBox";
             const descBox = "descriptionBox";
-            const closeButton = "<button class='closeButton'>Click This To Close</button>"
+            const closeButton = "<button class='closeButton'>Click This To Close</button>";
             var containers = [];
 
             for (var i=0; i<imgCaptions.length; i++) {
-                imgElem = `<img src="images/oc_gallery_${i+1}.jpg">`;
+                imgElem = `<img src="images/oc_gallery_${i+1}.jpg" alt=${imgCaptions[i]}>`;
                 capElem = `<figcaption>${imgCaptions[i]}</figcaption>`;
-                figure = `<figure>${imgElem}${capElem}</figure>`;
+                lightboxElem = `<a href="#/" class="${lightboxToggleClass}"> ${imgElem} </a>`
+                figure = `<figure>${lightboxElem}${capElem}</figure>`;
 
                 floatElem = `<span class="${floatBox}"> ${floatTexts[i]} </span>`;
                 longDesc = `This is an image of ${imgCaptions[i]} related to Orange County. The picture was selected because of its natural sincerity having no elements of artificial or manipulation presentation. The photograph under analysis depicts nature in all its beauty and magic.`;
@@ -66,6 +75,7 @@
             }
             document.getElementById("album").innerHTML = containers.join('');
         </script>
+
         <!-- Script to display description box on click -->
         <script>
             const album = document.getElementById("album");
@@ -88,5 +98,9 @@
                 });
             }
         </script>
+
+        <!-- Script for lightbox -->
+        <script src="js/lightbx.js"></script>
+
     </body>
 </html>
